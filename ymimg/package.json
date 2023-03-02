@@ -2,9 +2,12 @@
   "name": "ymimg",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://song-ahyeon.github.io/page-test",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
+    "predeploy": "npm run build",
+    "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles",
     "start": "next start",
     "lint": "next lint"
   },
@@ -18,5 +21,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "4.9.5"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
