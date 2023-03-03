@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: '/',
+  basePath: '/page-test',
   reactStrictMode: false,
   eslint: {
     ignoreDuringBuilds: true
