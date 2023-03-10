@@ -1,0 +1,52 @@
+$palettes: (
+  blue: (
+    100: #00A2E5, // Brand Sub Colors/Pantone 2995C
+    200: #007BFF,
+    300: #003D90,
+    400: #0E207F, // Brand Main Colors/SM Blue
+  ),
+  indigo: (
+    100: #393A96, // Brand Sub Colors/Pantone 266C
+    200: #3A00E5,
+  ),
+  achromatic: (
+    100: #FFFFFF,
+    200: #FAFAFA,
+    300: #F2F2F2, // Gray 6
+    400: #828282, // Gray 3
+    500: #666666,
+    600: #4F4F4F,
+    700: #000000,
+  ),
+  muted: (
+    600: #333B3D, // Brand Main Colors/SM Dark Gray
+    700: #363636, // carbon/800
+    800: #210C33, // Primary/900
+  ),
+  purple: (
+    100: #B51385, // Brand Sub Colors/Panton 240C
+  ),
+  orange: (
+    100: #F9A13A, // Brand Sub Colors/Pantone 151C
+  ),
+  green: (
+    100: #91CE44, // Brand Sub Colors/Pantone 375C
+  ),
+  yellow: (
+    100: #FFDF1C, // Brand Sub Colors/Pantone 109C
+    200: #F2C94C, 
+    300: #8D6E26, // Brand Main Colors/SM Gold
+  ),
+  red: (
+    100: #EE334E, // Brand Sub Colors/Pantone 192C
+  )
+);
+
+:root {
+  @each $colorname, $palette in $palettes {
+      @each $key, $value in $palette {
+          $keyname: "--palette-" + $colorname + "-" + $key;
+          #{$keyname}: #{$value};
+      }
+  }
+}

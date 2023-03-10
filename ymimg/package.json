@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build && next export",
     "predeploy": "npm run build",
-    "deploy": "echo out/.nojekyll && gh-pages -d out --dotfiles",
+    "deploy": "echo out/.nojekyll && gh-pages -d out --dotfiles && rmdir -rf node_modules/.cache",
     "start": "next start",
     "lint": "next lint"
   },
@@ -20,9 +20,13 @@
     "next": "13.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "sass": "^1.58.3",
+    "styled-component": "^2.8.0",
     "typescript": "4.9.5"
   },
   "devDependencies": {
+    "@types/styled-components": "^5.1.26",
+    "babel-plugin-styled-components": "^2.0.7",
     "gh-pages": "^5.0.0"
   }
 }

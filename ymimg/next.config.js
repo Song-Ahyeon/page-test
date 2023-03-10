@@ -15,13 +15,14 @@ const nextConfig = {
   },
   images: {
     loader: 'imgix',
-    path: 'http://song-ahyeon.github.io/page-test'
+    path: 'https://song-ahyeon.github.io/page-test'
   },
 }
 
-export const prefix =
+const prefix =
   process.env.NODE_ENV === "production"
     ? "https://song-ahyeon.github.io/page-test"
     : "";
 
 module.exports = nextConfig
+module.exports = prefix
